@@ -1,0 +1,56 @@
+
+    #btn {
+        display: flex;
+        justify-content: center;
+       
+      }
+
+      #root{
+        display: flex;
+      
+      }
+
+      button {
+        margin-left :20px;
+        margin-right: 20px;
+     }
+    .center {
+        padding: 4rem 8rem;
+        display: inline-block;
+        border: 3px solid #333333;
+        font-size: 1.5rem;
+        border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+        text-transform: uppercase;
+        letter-spacing: 0.3ch;
+        background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);;
+        position: relative;
+        margin: 50px 200px 0px 300px;
+    }
+
+
+h1 {
+    text-align: center;
+  }
+
+  h2 {
+    color: rgb(14, 107, 42);
+  }
+
+  p {
+    color: rgb(79, 81, 76);
+  }
+
+  .user {
+    border: 3px solid #891a76;
+  }
+
+  #root {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10px;
+    text-align: center;
+  }
+ 
+ 
