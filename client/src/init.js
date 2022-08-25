@@ -18,7 +18,7 @@ function myFunction() {
 
 
 function showUsers(data){
-    cleatRoot();
+    clearRoot();
     data.forEach(user => {
       showUser(user);
     })
@@ -53,12 +53,15 @@ button.addEventListener('click', handleClick);
 
 function handleClick() {
   const user_input = document.getElementById('number-input').value;
-  cleatRoot();
+  clearRoot();
   if (user_input == "" ) {
-    alert("Please enter something");
+    alert("Please enter something!!");
   } else if(isNaN(user_input)) {
     alert("Please enter a valid User ID");
-  } else {
+  } 
+  else if(user_input>10){
+    alert("User ID doesn't exists!!");
+  }else {
     getuserFunction(user_input);
   }
   
@@ -82,7 +85,7 @@ function getuserFunction(user_input) {
   .catch(err =>  console.error(err));
 }
 
-function cleatRoot() {
+function clearRoot() {
     while (root.firstChild) {
       root.removeChild(root.firstChild);
     }
