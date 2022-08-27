@@ -30,21 +30,15 @@ export const showUser = (user)=>{
 }
 
 export const getuserFunction = (user_input) => {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://jsonplaceholder.typicode.com/users/'+user_input)
     .then(response => {
       if(response.status === 200)
       {
           return response.json();
       }
     })
-    .then(data => {
-      data.forEach(user => {
-        if(user.id == user_input) {
-          showUser(user);
-        } 
-      })
-    })
-    .catch(err =>  console.error(err));
+    .then(data => showUser(data))
+    .catch(err =>  alert("User Id doesnt exists"));
   }
   
 
